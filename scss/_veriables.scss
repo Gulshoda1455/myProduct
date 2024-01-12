@@ -1,0 +1,25 @@
+
+@mixin display($items:center, $space:space-between){
+    display: flex;
+    align-items: $items;
+    justify-content: $space;
+}
+
+@mixin textStyle($color:#22343D, $fontSize:16px, $fontWeight:400, $lineHeight:28px){
+    color: $color;
+    font-size: $fontSize;
+    font-style: normal;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+}
+
+@mixin button($width:110px, $padding:10px 0 9px, $colorbg:#02897A, $bcolor:#fff ){
+   @include textStyle($color: $bcolor, $fontSize:16px, $fontWeight:600, $lineHeight:normal);
+   padding: $padding;
+   width: $width; 
+   background-color: $colorbg;
+   border-radius: 4px;
+   text-align: center;
+
+   
+}

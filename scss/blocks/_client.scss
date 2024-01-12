@@ -1,0 +1,87 @@
+.client-section {
+    margin-bottom: 157px;
+}
+
+.client {
+    text-align: center;
+   
+}
+.client-title {
+    margin-bottom: 8px;
+    text-align: center;
+    @include textStyle($fontSize:34px, $fontWeight:700, $lineHeight:57px);
+    letter-spacing: 0.2px;
+}
+.client-text {
+    margin-bottom: 50px;
+    text-align: center;
+    @include textStyle($fontSize:16px, $fontWeight:500, $lineHeight:28px);
+    letter-spacing: 0.2px;  
+}
+.client-list {
+    @include display();
+}
+.client-item {
+    padding: 28px 0 24px;
+    width: 327px;
+    text-align: start;
+    border-radius: 5px;
+    border: 1px solid #DEDEDE;
+    background: var(--light-background, #FFF);
+}
+
+.client-item-top {
+    width: 275px;
+    margin: 0 auto;
+}
+
+.client-item-text {
+    margin-bottom: 17px;
+    @include textStyle($color: var(--second-text-color, #737373), $fontSize:16px, $fontWeight:400, $lineHeight:28px);
+    letter-spacing: 0.2px; 
+
+}
+.client-item-bottom {
+  @include display($space:start);  
+}
+.client-item-bottom-content {
+    margin-left: 14px;
+}
+.client-bottom-content-title {
+    @include textStyle($color:#02897A, $fontSize:16px, $fontWeight:600, $lineHeight:28px);
+    letter-spacing: 0.2px; 
+
+}
+.client-bottom-content-text {
+    @include textStyle($color: var(--text-color, #252B42), $fontSize:14px, $fontWeight:500, $lineHeight:24px);
+    letter-spacing: 0.2px; 
+}
+
+@media (max-width:1040px){
+    .client-item {
+        width: 280px;
+    }
+    .client-item-top {
+        width: 265px;
+    }
+}
+@media (max-width:900px){
+    .client-list {
+       flex-direction: column;
+       gap: 32px;
+    }
+    .client-item {
+        width: 100%;
+    }
+    .client-item-top {
+        width: 90%;
+    }
+}
+@media (max-width:500px){
+    .client-section {
+        margin-bottom: 100px;
+    }
+    .client-text {
+        margin-bottom: 32px;
+    }
+}

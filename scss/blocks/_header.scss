@@ -1,0 +1,85 @@
+.Site-header {
+    padding: 18px 0 19px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.header {
+    @include display();
+}
+.header_logo-link {
+    display: inline-block;
+}
+.navbar {
+    @include display($space:start);
+}
+.navbar-list {
+    @include display($space:start);
+    gap: 30px;
+    margin-right: 24px;
+}
+.navbar-item {
+    @include textStyle();
+}
+.navbar-link {
+    transition: font-weight 0.4s linear;
+    @include textStyle();
+    &:hover{
+        @include textStyle($fontWeight:600); 
+    }
+}
+.header-wrap {
+    @include display($space:start);
+    gap: 24px;
+}
+.navbar-sign-in {
+    @include button($width:102px,  $colorbg:#fff , $bcolor:#173A56);
+    border: 1px solid #BCD0E5;
+    &:hover{
+        opacity: 0.8;
+       }
+}
+.navbar-sign-up {
+    @include button();
+    &:hover{
+     opacity: 0.8;
+    }
+}
+.header-hamburger{
+    border: none;
+    background-color: transparent;
+    display: none;
+}
+
+@media only screen and (max-width:920px){
+    .header_logo-img{
+        width: 170px;
+    }
+    .navbar-list {
+        gap: 25px;  
+        margin-right: 20px;
+    }
+    .header-wrap {
+        gap: 20px;
+    }
+    
+}
+@media (max-width:880px){
+    .navbar-list{
+        display: none;
+    }
+    .header-img{
+        display: none;
+    }
+    .header-hamburger{
+        display: block;
+    }
+ 
+}
+@media (max-width:540px){
+    .navbar-sign-in, .navbar-sign-up{
+        display: none;
+    }
+}
